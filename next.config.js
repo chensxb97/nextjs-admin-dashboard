@@ -10,7 +10,8 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'avatar.vercel.sh'
       }
-    ]
+    ],
+    domains: ['lh3.googleusercontent.com']
   }
 };
 

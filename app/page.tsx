@@ -1,12 +1,19 @@
 import { getUsers } from '@/lib/db';
 import { UsersTable } from './users-table';
 import { Search } from './search';
+import { auth } from "@/lib//auth";
+import { redirect } from "next/navigation";
 
 export default async function IndexPage({
   searchParams
 }: {
   searchParams: { q: string; offset: string };
 }) {
+  const session = await auth()
+  if (!session || !session.user) {
+    redirect("/api/auth/signin?callbackUrl=/")
+  }
+
   const search = searchParams.q ?? '';
   const offset = searchParams.offset ?? 0;
   const { users, newOffset } = await getUsers(search, Number(offset));
