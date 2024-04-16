@@ -49,25 +49,6 @@ export default {
             inverted: '#ffffff' // white
           }
         },
-        boxShadow: {
-          // light
-          'tremor-input': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-          'tremor-card':
-            '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-          'tremor-dropdown':
-            '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
-        },
-        borderRadius: {
-          'tremor-small': '0.375rem',
-          'tremor-default': '0.5rem',
-          'tremor-full': '9999px'
-        },
-        fontSize: {
-          'tremor-label': '0.75rem',
-          'tremor-default': ['0.875rem', { lineHeight: '1.25rem' }],
-          'tremor-title': ['1.125rem', { lineHeight: '1.75rem' }],
-          'tremor-metric': ['1.875rem', { lineHeight: '2.25rem' }]
-        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -102,10 +83,27 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         }
       },
+      boxShadow: {
+        // light
+        'tremor-input': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+        'tremor-card':
+          '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        'tremor-dropdown':
+          '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
+      },
       borderRadius: {
+        'tremor-small': '0.375rem',
+        'tremor-default': '0.5rem',
+        'tremor-full': '9999px',
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
+      },
+      fontSize: {
+        'tremor-label': '0.75rem',
+        'tremor-default': ['0.875rem', { lineHeight: '1.25rem' }],
+        'tremor-title': ['1.125rem', { lineHeight: '1.75rem' }],
+        'tremor-metric': ['1.875rem', { lineHeight: '2.25rem' }]
       },
       keyframes: {
         'accordion-down': {
