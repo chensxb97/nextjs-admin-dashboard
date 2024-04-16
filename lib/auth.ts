@@ -25,8 +25,7 @@ export const {
         }
       },
       async authorize(credentials) {
-        // This is where you need to retrieve user data 
-        // to verify with credentials
+        // This is where you need to retrieve user data to verify the keyed credentials
         // Docs: https://next-auth.js.org/configuration/providers/credentials
         // const res = await fetch("/your/endpoint", {
         //   method: 'POST',

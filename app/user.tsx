@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { auth, signIn, signOut } from '@/lib/auth';
 import Image from 'next/image';
+import { revalidatePath } from "next/cache"
 
 export async function User() {
   const session = await auth();
@@ -35,6 +36,7 @@ export async function User() {
         action={async () => {
           'use server';
           await signOut();
+          revalidatePath('/')
         }}
       >
         <Button variant="ghost">Sign Out</Button>
