@@ -2,7 +2,7 @@ import './globals.css';
 
 import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/react';
-import { Logo, SettingsIcon, UsersIcon, SearchIcon } from '@/components/icons';
+import { Logo, SettingsIcon, UsersIcon, DashboardIcon } from '@/components/icons';
 import { User } from './user';
 import { NavItem } from './nav-item';
 import Providers from "./providers";
@@ -41,7 +41,7 @@ export default function RootLayout({
                       Users
                     </NavItem>
                     <NavItem href="/Dashboard">
-                      <SearchIcon className="h-4 w-4" />
+                      <DashboardIcon className="h-4 w-4" />
                       Dashboard
                     </NavItem>
                     <NavItem href="/settings">
